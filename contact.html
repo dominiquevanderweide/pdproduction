@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — P/D Production</title>
+<meta name="description" content="Aan tafel? Neem contact op met P/D Production — Petra Holland en Dominique van der Weide. Stuur een bericht of mail ons direct." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;1,6..96,500;1,6..96,600&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="P/D Production — home"><img class="brand-logo" src="images/logo.png" alt="P/D Production" /></a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="over-ons.html">Over ons</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li class="nav-cta"><a class="btn btn--solid" href="contact.html">Aan tafel?</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<section class="section" data-screen-label="contact">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div>
+        <p class="eyebrow reveal">Aan tafel?</p>
+        <h1 class="h-xl reveal" data-delay="1">Laten we beginnen<br /><span class="serif-accent">met koffie</span></h1>
+        <p class="lead reveal" data-delay="2" style="margin-top:22px;">Vertel ons over je merk en je project. We beginnen aan tafel — een kennismaking van 30 minuten, gratis en vrijblijvend. Binnen twee werkdagen hoor je van ons.</p>
+
+        <div style="margin-top:clamp(36px,5vw,56px);display:grid;gap:28px;">
+          <div class="contact-card reveal">
+            <span class="tag tag--pet">Petra</span>
+            <div class="contact-card__name">Petra Holland</div>
+            <div class="contact-card__role">Fotografe</div>
+            <ul class="contact-card__list">
+              <li><a href="mailto:info@petraholland.nl">info@petraholland.nl</a></li>
+              <li><a href="tel:+31625023742">06 25 02 37 42</a></li>
+              <li><a href="https://instagram.com/petrahollandfotografie" target="_blank" rel="noopener">@petrahollandfotografie</a></li>
+            </ul>
+          </div>
+          <div class="contact-card reveal" data-delay="1">
+            <span class="tag tag--dom">Dominique</span>
+            <div class="contact-card__name">Dominique van der Weide</div>
+            <div class="contact-card__role">Productie &amp; creatief</div>
+            <ul class="contact-card__list">
+              <li><a href="mailto:dominiquevanderweide@gmail.com">dominiquevanderweide@gmail.com</a></li>
+              <li><a href="tel:+31618268084">06 18 26 80 84</a></li>
+              <li><a href="https://instagram.com/dominiquevdweide_" target="_blank" rel="noopener">@dominiquevdweide_</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" data-delay="1">
+        <form id="contact-form" novalidate>
+          <!-- ============================================================
+               WEB3FORMS — gratis formulierverwerking, geen server nodig.
+               STAP 1: maak een gratis access key aan op https://web3forms.com
+                       (vul je eigen e-mailadres in; de key komt per mail).
+               STAP 2: plak die key hieronder in plaats van VERVANG_MIJ.
+               Daarna komen inzendingen automatisch in je mailbox binnen.
+               Zolang de key niet is ingevuld, toont het formulier alleen
+               de bedank-melding (demo-modus).
+               ============================================================ -->
+          <input type="hidden" name="access_key" value="VERVANG_MIJ" />
+          <input type="hidden" name="subject" value="Nieuwe aanvraag via pdproduction.nl" />
+          <input type="hidden" name="from_name" value="PD Production website" />
+          <!-- honeypot tegen spam: blijft leeg voor echte bezoekers -->
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true" />
+          <div class="form-row">
+            <div class="field">
+              <label for="naam">Naam *</label>
+              <input type="text" id="naam" name="naam" autocomplete="name" placeholder="Voor- en achternaam" />
+              <span class="field__err">Vul je naam in.</span>
+            </div>
+            <div class="field">
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="naam@bedrijf.nl" />
+              <span class="field__err">Vul een geldig e-mailadres in.</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="bedrijf">Bedrijf / merk</label>
+              <input type="text" id="bedrijf" name="bedrijf" autocomplete="organization" placeholder="Optioneel" />
+            </div>
+            <div class="field">
+              <label for="type">Waar kunnen we mee helpen?</label>
+              <select id="type" name="type">
+                <option value="Editorial fotografie">Editorial fotografie</option>
+                <option value="Content productie">Content productie</option>
+                <option value="Reels &amp; social content">Reels &amp; social content</option>
+                <option value="Brand storytelling">Brand storytelling</option>
+                <option value="Anders / weet ik nog niet">Anders / weet ik nog niet</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="bericht">Bericht *</label>
+            <textarea id="bericht" name="bericht" placeholder="Vertel kort over je merk, het project, planning en eventueel budget."></textarea>
+            <span class="field__err">Laat een kort bericht achter.</span>
+          </div>
+
+          <button type="submit" class="btn btn--solid btn--lg" style="width:100%;justify-content:center;">Verstuur bericht <span class="arrow" aria-hidden="true">→</span></button>
+          <p class="form-note">Door te versturen ga je akkoord met de verwerking van je gegevens om te reageren op je aanvraag.</p>
+
+          <div class="form-success" id="form-success" role="status">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg></span>
+            <div>
+              <strong style="font-family:var(--font-display);">Bedankt voor je bericht!</strong>
+              <p style="margin:4px 0 0;color:var(--ink-soft);">We nemen binnen twee werkdagen contact met je op — tijd voor koffie.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="images/logo-white.png" alt="P/D Production" />
+        <p class="muted" style="max-width:34ch;margin-top:20px;">Editorial fotografie, content producties en reels. Van het eerste concept tot de laatste opgeleverde foto.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigatie</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="over-ons.html">Over ons</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="contact-list">
+          <li><a href="mailto:info@petraholland.nl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>info@petraholland.nl</a></li>
+          <li><a href="mailto:dominiquevanderweide@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>dominiquevanderweide@gmail.com</a></li>
+          <li><a href="https://instagram.com/petrahollandfotografie" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>@petrahollandfotografie</a></li>
+          <li><a href="https://instagram.com/dominiquevdweide_" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>@dominiquevdweide_</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> P/D Production</span>
+      <span>Fotografie &amp; bewegend beeld.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script src="tweaks.js"></script>
+
+<template id="__bundler_thumbnail" data-bg-color="#F4EBDD">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#F4EBDD"/>
+    <text x="600" y="430" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="300" fill="#211B14">P/D</text>
+    <text x="600" y="520" text-anchor="middle" font-family="Georgia, serif" font-size="46" letter-spacing="16" fill="#211B14">CONTACT</text>
+  </svg>
+</template>
+<script>
+/* ---- Contact form validation ---- */
+(function () {
+  var form = document.getElementById("contact-form");
+  if (!form) return;
+  var success = document.getElementById("form-success");
+  function fieldOf(input) { return input.closest(".field"); }
+  function setError(input, on) { fieldOf(input).classList.toggle("invalid", on); }
+  function validEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+  var naam = form.naam, email = form.email, bericht = form.bericht;
+  [naam, email, bericht].forEach(function (inp) {
+    inp.addEventListener("input", function () { if (fieldOf(inp).classList.contains("invalid")) validate(false); });
+  });
+  function validate(focus) {
+    var ok = true, first = null;
+    if (!naam.value.trim()) { setError(naam, true); ok = false; first = first || naam; } else setError(naam, false);
+    if (!validEmail(email.value.trim())) { setError(email, true); ok = false; first = first || email; } else setError(email, false);
+    if (!bericht.value.trim()) { setError(bericht, true); ok = false; first = first || bericht; } else setError(bericht, false);
+    if (focus && first) first.focus();
+    return ok;
+  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!validate(true)) return;
+
+    var btn = form.querySelector("button[type=submit]");
+    var btnLabel = btn ? btn.innerHTML : "";
+    function lock(on) {
+      form.querySelectorAll("input, textarea, select, button").forEach(function (el) { el.disabled = on; });
+    }
+    function showSuccess() {
+      success.classList.add("show");
+      setTimeout(function () {
+        form.reset();
+        lock(false);
+        if (btn) btn.innerHTML = btnLabel;
+      }, 400);
+    }
+
+    var key = (form.access_key && form.access_key.value || "").trim();
+    lock(true);
+
+    // Demo-modus: zolang er geen echte Web3Forms-key is ingevuld,
+    // tonen we alleen de bedank-melding (verstuurt niets).
+    if (!key || key === "VERVANG_MIJ") { showSuccess(); return; }
+
+    if (btn) btn.innerHTML = "Versturen…";
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: new FormData(form)
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data && data.success) { showSuccess(); }
+        else { throw new Error(data && data.message || "mislukt"); }
+      })
+      .catch(function () {
+        lock(false);
+        if (btn) btn.innerHTML = btnLabel;
+        alert("Er ging iets mis bij het versturen. Mail ons gerust direct via info@petraholland.nl.");
+      });
+  });
+})();
+</script>
+</body>
+</html>
