@@ -520,3 +520,49 @@ image-slot { background: var(--sand); --slot-bg: var(--sand); }
 #dp-tweaks .dpt-segbtn.on { background: var(--accent); border-color: var(--accent); color: #fff; }
 #dp-tweaks .dpt-foot { padding: 10px 14px 13px; font-size: 0.72rem; color: var(--on-dark-mut); border-top: 1px solid rgba(244,235,221,0.1); }
 
+/* =========================================================
+   MOBIELE VERFIJNINGEN (telefoon-proof)
+   ========================================================= */
+/* "Wie zijn wij" twee-koloms blok op over-ons */
+.about-cols { grid-template-columns: 0.85fr 1.15fr; }
+@media (max-width: 820px){ .about-cols { grid-template-columns: 1fr; } }
+.about-portrait img { width: 100%; height: auto; border-radius: var(--r); }
+
+/* Algemene tablet/telefoon polish */
+@media (max-width: 760px){
+  body { font-size: 16px; }
+  /* iets meer ademruimte rond de pagina-randen */
+  :root { --gutter: 20px; }
+  /* hero leest prettiger op smal scherm */
+  .hero { min-height: 88vh; }
+  .hero__inner { padding-top: 104px; }
+  .hero__row { gap: 20px; }
+  .hero__actions { width: 100%; }
+  .hero__actions .btn { width: 100%; justify-content: center; }
+  /* knoppen vullen de breedte zodat ze makkelijk te tikken zijn */
+  .cta .btn, .section .btn--lg { width: 100%; justify-content: center; }
+  /* sectie-koppen netjes onder elkaar */
+  .sec-head { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .sec-head .measure { max-width: none; }
+}
+
+/* Heel kleine schermen */
+@media (max-width: 420px){
+  .metastrip { grid-template-columns: 1fr 1fr; }
+  .filterbar { gap: 8px; }
+  .filter { font-size: 0.8rem; padding: 9px 14px; }
+  /* contactkaarten niet te krap */
+  .contact-card { padding: 20px; }
+}
+
+/* Voorkom horizontaal scrollen door te brede media */
+img, video, iframe { max-width: 100%; }
+.proj__media, .m-item, .masonry figure { max-width: 100%; }
+
+/* Grotere, makkelijk tikbare nav-links in het mobiele menu */
+@media (max-width: 860px){
+  .nav-links a { padding-block: 6px; }
+  .nav-links .btn { width: 100%; justify-content: center; margin-top: 6px; }
+}
+
+

@@ -22,10 +22,11 @@ Statische website (HTML/CSS/JS). Klaar voor **GitHub Pages**.
 - Zet bij je registrar de DNS-records zoals GitHub aangeeft (A-records / CNAME).
 
 ## Contactformulier activeren (Web3Forms — gratis)
-Het formulier werkt zonder server via Web3Forms.
-1. Ga naar https://web3forms.com en vul je e-mailadres in → je krijgt een **Access Key**.
+Het formulier werkt zonder server via Web3Forms. Inzendingen komen binnen op
+**info@pdproduction.nl**.
+1. Ga naar https://web3forms.com en vul **info@pdproduction.nl** in → je krijgt een **Access Key** op dat adres.
 2. Open `contact.html`, zoek `name="access_key" value="VERVANG_MIJ"`.
-3. Vervang `VERVANG_MIJ` door je eigen key. Klaar — inzendingen komen in je mailbox.
+3. Vervang `VERVANG_MIJ` door je eigen key. Klaar — elke aanvraag komt binnen op info@pdproduction.nl.
 
 Zolang de key niet is ingevuld, toont het formulier alleen de bedank-melding (demo).
 
