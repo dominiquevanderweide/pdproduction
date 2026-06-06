@@ -214,27 +214,29 @@
     }
 
     var key = (form.access_key && form.access_key.value || "").trim();
-    lock(true);
 
     // Demo-modus: zolang er geen echte Web3Forms-key is ingevuld,
     // tonen we alleen de bedank-melding (verstuurt niets).
-    if (!key || key === "VERVANG_MIJ") { showSuccess(); return; }
+    if (!key || key === "VERVANG_MIJ") { lock(true); showSuccess(); return; }
 
+    // Collect FormData BEFORE locking — disabled fields are excluded from FormData.
+    var payload = new FormData(form);
+    lock(true);
     if (btn) btn.innerHTML = "Versturen…";
     fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: { "Accept": "application/json" },
-      body: new FormData(form)
+      body: payload
     })
       .then(function (r) { return r.json(); })
       .then(function (data) {
         if (data && data.success) { showSuccess(); }
-        else { throw new Error(data && data.message || "mislukt"); }
+        else { throw new Error((data && data.message) || JSON.stringify(data) || "mislukt"); }
       })
-      .catch(function () {
+      .catch(function (err) {
         lock(false);
         if (btn) btn.innerHTML = btnLabel;
-        alert("Er ging iets mis bij het versturen. Mail ons gerust direct via info@pdproduction.nl.");
+        alert("Er ging iets mis bij het versturen.\n\nFoutmelding: " + (err && err.message ? err.message : err) + "\n\nMail ons gerust direct via info@pdproduction.nl.");
       });
   });
 })();
